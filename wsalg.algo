@@ -1,0 +1,32 @@
+ALGORITHM WorkShop;
+VAR         
+    Nb, Nb1, i, Nb2, k, j :INTEGER;
+    Bla : STRING;
+BEGIN
+****************longueur de la paragrephe
+    WRITE ("enter une paragraphe");
+    READ : Bla;
+    Nb := LEN(Bla);
+    WRITE (" ce paragraphe compte ", Nb ,"character");
+
+
+**************nombre de mot en phrase           
+    Nb1 := 0;
+    FOR i:=1 to LEN(Bla) 
+    IF Mid(Bla, i, 1) = " " THEN
+    Nb1 := Nb1 + 1;
+    END IF 
+    i ++
+    WRITE "cette phrase compte ",Nb1 + 1, "mots";
+
+
+***************nombre de voyelles 
+    Nb2 := 0;
+    FOR j:= 1 to LEN(Bla);
+    IF Mid(Bla, j ,1) = "a" OR  Mid(Bla, j ,1) = "e" OR  Mid(Bla, j ,1) = "i" OR  Mid(Bla, j ,1) = "o" OR  Mid(Bla, j ,1) = "u" OR  Mid(Bla, j ,1) = "y" THEN
+    Nb2:= Nb2 + 1;
+    j ++
+    WRITE " cette phrase compte ", Nb2, "voyelles"
+    END IF
+    END
+
